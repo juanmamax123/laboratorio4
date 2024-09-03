@@ -21,30 +21,38 @@ export default function Home() {
           </h1>
         </div>
       </header>
-      <section id="info" className={styles.infosection}>
+      <section id="info" className={styles.infoSection}>
         <img
           src="imagen-para-website.jpg"
           alt="Imagen"
           className={styles.image}
-          />
-        <div className={styles.infocontainer}>
+        />
+        <div className={styles.infoContainer}>
           <span className={styles.title + "" + styles.yellowText}>Maxcimiliano</span>
           <br />
           <span className={styles.title}> Morales</span>
-        </div>
-      <div> className={styles.list}
-          <ul>
-            <li>
-               <span className ={styles.graytext} ></span>age: 27
-               </li>
-               <li>
-              <span className ={styles.graytext} ></span>Nationality: German</li>
-                <li>
-                <span className ={styles.graytext} ></span>Skill set: Project Management and Financial Performance</li>
-                <li>
-                <span className ={styles.graytext} ></span>Langages: English, German</li>
-          </ul>
+          <div className={styles.list}>
+            <ul>
+              <li>
+                <span className={styles.grayText} >age:</span> 16
+              </li>
+              <li>
+                <span className={styles.grayText} >Nationality:</span> Guatemalteco</li>
+              <li>
+                <span className={styles.grayText} >Skill set:</span> Project Management and Financial Performance</li>
+              <li>
+                <span className={styles.grayText} >Langages:</span> English, German and spanish</li>
+
+            </ul>
           </div>
+        </div>
+
+      </section>
+
+      <section id="info" className={styles.infosection}>
+        <img src="bat.jpg" alt="Imagen" className={styles.image} />
+        <img src="fuerte.jpg" alt="Imagen" className={styles.image} />
+        <img src="guerra.webp" alt="Imagen" className={styles.image} />
       </section>
     </main>
   );

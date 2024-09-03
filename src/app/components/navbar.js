@@ -6,23 +6,31 @@ import styles from './navbar.module.css';
 function Navbar() {
     const [selectedItem, setSelectedItem] = useState('inicio')
 
-    const handleItemClick = (item) => {
+    const handleItemClick = (item, id) => {
         setSelectedItem(item);
-    }
+        scrollToSection(id);
+    };
+
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
-        <nav className={styles.Navbar + ` ${selectedItem === 'Inicio' ? styles.selected : ''}`}>
+        <nav className={styles.navbar }>
             <div
-                className={styles.NavbarItem}
-                onclick={() => handleItemClick('Inicio')}
+                className={styles.navbarItem + ` ${selectedItem === 'Inicio' ? styles.selected : ' '}`}
+                onClick={() => handleItemClick('Inicio', 'header')}
 
             >
 
                 <a href="#header">Inicio</a>
             </div>
             <div
-                className={styles.NavbarItem + ` ${selectedItem === 'Inicio' ? styles.selected : ''}`}
-                onclick={() => handleItemClick('Skills')}
+                className={styles.navbarItem + ` ${selectedItem === 'Skills' ? styles.selected : ' '}`}
+                onClick={() => handleItemClick('Skills', 'info')}
             >
                 <a href="#info">Skills</a>
             </div>
